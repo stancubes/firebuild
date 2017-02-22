@@ -1,0 +1,282 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: Museo;
+	font-size: 16px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+@font-face {
+  font-family: 'Museo';
+  src: url('../fonts/museo.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/museo.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/museo.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/museo.woff') format('woff'), /* Pretty Modern Browsers */
+  url('../fonts/museo.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/museo.svg#museo') format('svg'); /* Legacy iOS */
+}
+
+
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: inline-block;
+	float:left;
+	margin: 0;
+	padding: 1px;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF TWELVE  */
+.span_12_of_12 {
+	width: 100%;
+}
+
+.span_11_of_12 {
+  	width: 91.66%;
+}
+.span_10_of_12 {
+  	width: 83.33%;
+}
+
+.span_9_of_12 {
+  	width: 75%;
+}
+
+.span_8_of_12 {
+  	width: 66.66%;
+}
+
+.span_7_of_12 {
+  	width: 58.33%;
+}
+
+.span_6_of_12 {
+  	width: 50%;
+}
+
+.span_5_of_12 {
+  	width: 41.66%;
+}
+
+.span_4_of_12 {
+  	width: 33.33%;
+}
+
+.span_3_of_12 {
+  	width: 25%;
+}
+
+.span_2_of_12 {
+  	width: 16.66%;
+}
+
+.span_1_of_12 {
+  	width: 8.333%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 1200px) {
+	.col {  margin: 0; }
+    
+    .span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_6_of_12, .span_7_of_12, .span_8_of_12, .span_9_of_12, .span_10_of_12, .span_11_of_12, .span_12_of_12 {
+	width: 100%; 
+	}
+}
+
+
+
+.addRow {
+	width: 100%;
+	height: 8px;
+}
+#addRowIcon {
+	font-size: 24px;
+	background: #ECEFF1;
+	color: #4d4d4d;
+	padding: 8px;
+	border-radius: 28px;
+	cursor: pointer;
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left: -28px;
+}
+#addRowIcon:hover {
+	color: #0091ea;
+}
+
+
+
+#main-container {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+
+#myBar {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 64px;
+	padding: 8px;
+	background: #ffffff;
+	z-index: 10;
+	box-shadow: 0 -5px 5px -5px #333;
+	/*border-top: 2px solid #4d4d4d;*/
+}
+
+#myBar img {
+	height: 48px;
+}
+
+
+
+#boxToolbar {
+	background: #ECEFF1;
+	padding: 4px;
+	/*border: 1px solid #4d4d4d;*/
+	margin-left:200px;
+	cursor: default;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+#boxToolbar .action {
+	font-size: 20px;
+	padding: 4px;
+	display: block;
+	color: #4d4d4d;
+	cursor: pointer;
+}
+#boxToolbar .action:hover {
+	color: #0091ea;
+}
+
+
+
+
+
+#contentblock {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(77,77,77);
+	background: rgba(77,77,77,0.8);
+	z-index: 11;
+	display: none;
+}
+
+#dialog {
+	z-index: 12;
+	position: fixed;
+	top: 5%;
+	height: calc(100% - 10%);
+	left: 50%;
+	margin-left: -600px;
+	width: 1200px;
+	background: #fff;
+	display: none;
+}
+#dialog #dheader {
+	width: 100%;
+	height: 64px;
+	background: #ECEFF1;
+	color: #4d4d4d;
+	padding: 20px;
+	font-size: 24px;
+	font-weight: bold;
+	position: relative;
+}
+#dialog #dheader #dheaderbutton {
+	position: absolute;
+	right: 12px;
+	top: 18px;
+	cursor: pointer;
+}
+#dialog #dheader i {
+	color: #4d4d4d;
+}
+#dialog #dheader i:hover {
+	color: #0091ea;
+}
+#dialog #dcontent {
+	width: 100%;
+	border-left: 1px solid #ECEFF1;
+	border-right: 1px solid #ECEFF1;
+	border-bottom: 16px solid #ECEFF1;
+	height: calc(100% - 64px);
+	padding: 24px;
+	background: #fff;
+	color: #4d4d4d;
+}
